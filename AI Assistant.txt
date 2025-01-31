@@ -1,0 +1,27 @@
+AI Assistant
+
+
+
+Help user to decode what he is looking at ? --> doesn't require storage of user data -> Email/Text Summarization ? / Meaning of the texts the user hears/sees -> language translation -> document processing -> scan food items and suggest what to eat -> making everyone smart 
+
+Recognize stress levels from your voice tone and suggest healthier choices -> model
+
+web crawling ? -> to check real time weather updates, major events in the world, check book my show eat status / public transport
+
+safety alerts ? detect hazardous situations
+
+Help user to set reminders ? -> Autonomous Reminders (Location based) -> may require user data -> helping user with memory (also can store what you did and when)
+
+Facial Recognition ? - communication assistant -> helps with user on how he can talk with people (tone, vocab, etc)
+
+Can reply to your texts on your behalf or send emails
+
+
+Maps direction - may be audio channel ?
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+Store conversation history, user preferences, and action items.
+Maintain a long-term memory for persistent knowledge and a short-term memory for ongoing conversations.
+
+
+
+
+For Master AI to function effectively, it needs to remember past conversations, tasks, reminders, user preferences, and ongoing action items. We'll implement two types of memory:
+
+Short-term Memory
+
+Tracks the current session’s context (ongoing conversation).
+Useful for understanding user intent within a single interaction.
+Long-term Memory
+
+Stores user interactions, preferences, and past conversations.
+Helps AI make better decisions over time.
+Can be implemented using a vector database (like Pinecone, ChromaDB) or traditional DBs (MongoDB, PostgreSQL, SQLite, etc.).
+
+
+
+
+We have two main options:
+
+✅ Local Storage (File or SQLite)
+
+Easy to set up but limited in scalability.
+Works well for early testing.
+✅ Vector Database (Pinecone, ChromaDB, Weaviate, FAISS)
+
+Stores interactions as embeddings, making memory retrieval smarter.
+Allows semantic search (AI understands the meaning, not just keywords).
+Best for long-term use.
+For now, let’s start with a simple implementation using SQLite for structured data, and later integrate a vector database for advanced AI memory.
+
