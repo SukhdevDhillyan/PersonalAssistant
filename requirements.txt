@@ -1,0 +1,17 @@
+# requirements.txt
+
+# For calling the OpenAI API
+openai==0.27.0
+
+# For PostgreSQL database connectivity
+# If you don't have a system-level Postgres installation (headers, etc.), psycopg2-binary
+# can be used. In production, it's recommended to install psycopg2 from source instead.
+psycopg2
+
+# (Optional) If you use environment variables and want a .env file for local dev:
+# python-dotenv==1.0.0
+
+torch transformers
+ollama
+redis
+nltk

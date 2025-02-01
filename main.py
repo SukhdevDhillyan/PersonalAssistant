@@ -1,22 +1,25 @@
 # main.py
-from MasterAI import MasterAIOrchestrator
+from MasterAI.orchestrator import MasterAIOrchestrator
+import uuid
 
-def main():
-    user_id = "demo_user"
-    master_ai = MasterAIOrchestrator(user_id=user_id, max_context=5)
+user_id = "demo_user"
+master_ai = MasterAIOrchestrator(user_id)
 
-    print("Welcome to Master AI. Type 'quit' to exit.")
+message_cnt = 0
+conversation_id = str(uuid.uuid4())
 
-    while True:
-        user_input = input("User: ")
-        if user_input.lower() in ["quit", "exit"]:
-            print("Goodbye!")
-            break
+while True:
+    user_input = input("User: ")
+    message_cnt = message_cnt + 1
+    
+    prompt_payload = {
+        "conversation_id": conversation_id,
+        "message_id": message_cnt,
+        "user_id": "1",
+        "user_name": "sukhu",
+        "user_prompt": user_input
+    }
 
-        response = master_ai.handle_user_message(user_input)
-        print(f"AI: {response}\n")
-
-    master_ai.close()
-
-if __name__ == "__main__":
-    main()
+    if user_input.lower() == "exit":
+        break
+    master_ai.handle_user_message(prompt_payload)
